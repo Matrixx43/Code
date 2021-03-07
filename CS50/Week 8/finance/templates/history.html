@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <div class="form-group">
+      <h1 class="down-margins">
+          History
+      </h1>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Symbol</th>
+          <th scope="col">Price</th>
+          <th scope="col">Shares</th>
+          <th scope="col">Date</th>
+          <th scope="col">Operation</th>
+        </tr>
+      </thead>
+      <tbody>
+          {% for dictionary in table %}
+          <tr>
+              <td>{% if dictionary["symbol"] != None %}
+                {{ dictionary["symbol"] }}
+                {% endif %}</td>
+              <td>${{ dictionary["price"] }}</td>
+              <td>{% if dictionary["amount"] != None %}
+                {% if dictionary["type"] == "SELL" %}
+                  -{{ dictionary["amount"] }}
+                  {% else %}
+                  {{ dictionary["amount"] }}
+                  {% endif %}
+                {% endif %}
+              </td>
+              <td>{{ dictionary["time"] }}</td>
+              {% if dictionary["type"] == "BUY" %}
+                <td style="color: green;">{{ dictionary["type"] }}</td>
+              {% elif dictionary["type"] == "SELL" %}
+                <td style="color: red;">{{ dictionary["type"] }}</td>
+              {% else %}
+                <td>{{ dictionary["type"] }}</td>
+              {% endif %}
+
+            </tr>
+          {% endfor %}
+      </tbody>
+    </table>
+{% endblock %}
+
+

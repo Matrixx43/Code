@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <form action="/quote" method="get">
+        A share of {{ company }} {{ symbol }} costs ${{ price }}.
+    </form>
+{% endblock %}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Sports</title>
+        <style>
+        body {
+          background-color: rgb(204, 100, 204);
+        }
+        </style>
+        <script>
+            let counter = 0;
+
+            function increment2()
+            {
+                counter += 2;
+                document.querySelector('#result').innerHTML = counter;
+            }
+
+            function increment3()
+            {
+                counter +=3;
+                document.querySelector('#result').innerHTML = counter;
+            }
+        </script>
+    </head>
+    <body>
+        <h1 class="header1">
+            Basket
+        </h1>
+        <p class="text">
+            Basketball is a team sport in which two teams, most commonly of five players each, opposing one another on a rectangular court, compete with the primary objective of shooting a basketball (approximately 9.4 inches (24 cm) in diameter) through the defender's hoop (a basket 18 inches (46 cm) in diameter mounted 10 feet (3.048 m) high to a backboard at each end of the court) while preventing the opposing team from shooting through their own hoop. A field goal is worth two points, unless made from behind the three-point line, when it is worth three. After a foul, timed play stops and the player fouled or designated to shoot a technical foul is given one, two or three one-point free throws. The team with the most points at the end of the game wins, but if regulation play expires with the score tied, an additional period of play (overtime) is mandated.
+        </p>
+        <img class="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/LeBron_James_Layup_%28Cleveland_vs_Brooklyn_2018%29.jpg/413px-LeBron_James_Layup_%28Cleveland_vs_Brooklyn_2018%29.jpg" alt="Professional basketball">
+        <form onsubmit="increment2(); return false;">
+            <input class="button2" value="Scored Double" type="Submit">
+        </form>
+        <form onsubmit="increment3(); return false;">
+            <input class="button2" value="Scored Triple" type="Submit">
+        </form>
+        <div class ="button" id="result">
+            0
+        </div>
+        <a href="index.html" class="btn btn-primary button">Go back to main page</a>
+    </body>
+</html>

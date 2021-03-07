@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add results
+{% endblock %}
+
+{% block main %}
+    <div class="form-group">
+      <h1 class="down-margins">
+          Add match results
+      </h1>
+    </div>
+    <script>
+        function added()
+        {
+            alert('Game added correctly')
+        }
+    </script>
+    <form action="/add" method="post" onsubmit="added();">
+        <div class="form-group">
+            <div class="form-group">
+                <input class="form-control" name="winner" placeholder="Winner alias" type="text">
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="loser" placeholder="Loser alias" type="text">
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="wpoints" placeholder="Winner points" type="number" min="0">
+                --
+                <input class="form-control" name="lpoints" placeholder="Loser points" type="number" min="0">
+            </div>
+            <div class="form-group">
+                <input type="date" id="date" name="date" class="form-control">
+            </div>
+        </div>
+        <button class="btn btn-danger" type="submit">Submit</button>
+    </form>
+{% endblock %}

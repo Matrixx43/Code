@@ -1,0 +1,128 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Found
+{% endblock %}
+
+{% block main %}
+  {% if TYPE == 1 %}
+    <div class="form-group">
+      <h1 class="down-margins">
+          User found
+      </h1>
+    </div>
+    <div class="form-group">
+      <h6 class="down-margins">The following are the user's details</h6>
+      <ul class="form-group centered">
+          <li>Alias: {{ information[0]["username"] }}</li>
+          <li>Email: {{ information[0]["email"] }}</li>
+          <li>You have played {{ games_played }} games with {{ information[0]["username"] }}</li>
+          <li>You <span style="color:green; font-weight: 500;">won</span> {{ games_won }} games.</li>
+          <li>You <span style="color:red; font-weight: 500;">lost</span> {{ games_lost }} games.</li>
+      </ul>
+    </div>
+    <div class="form-group">
+      <h6 class="down-margins">{{ information[0]["username"] }}'s schedule is the following</h6>
+    </div>
+    <table class="table">
+        <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Monday</th>
+          <th scope="col">Tuesday</th>
+          <th scope="col">Wednesday</th>
+          <th scope="col">Thursday</th>
+          <th scope="col">Friday</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Morning</td>
+          {% if schedule[0][0] == 1 %}
+            <td><input type="checkbox" id="11" name="11" value="11" checked disabled></td>
+          {% else %}
+            <td><input type="checkbox" id="11" name="11" value="11" disabled></td>
+          {% endif %}
+          {% if schedule[0][1] == 1 %}
+            <td><input type="checkbox" id="12" name="12" value="12" checked disabled></td>
+          {% else %}
+            <td><input type="checkbox" id="12" name="12" value="12" disabled></td>
+          {% endif %}
+          {% if schedule[0][2] == 1 %}
+            <td><input type="checkbox" id="13" name="13" value="13" checked disabled></td>
+          {% else %}
+            <td><input type="checkbox" id="13" name="13" value="13" disabled></td>
+          {% endif %}
+          {% if schedule[0][3] == 1 %}
+            <td><input type="checkbox" id="14" name="14" value="14" checked disabled></td>
+          {% else %}
+            <td><input type="checkbox" id="14" name="14" value="14" disabled></td>
+          {% endif %}
+          {% if schedule[0][4] == 1 %}
+            <td><input type="checkbox" id="15" name="15" value="15" checked disabled></td>
+          {% else %}
+            <td><input type="checkbox" id="15" name="15" value="15" disabled></td>
+          {% endif %}
+        </tr>
+        <tr>
+          <td>Evening</td>
+          {% if schedule[1][0] == 1 %}
+            <td><input type="checkbox" id="21" name="21" value="21" checked disabled></td>
+          {% else %}
+            <td><input type="checkbox" id="21" name="21" value="21" disabled></td>
+          {% endif %}
+          {% if schedule[1][1] == 1 %}
+            <td><input type="checkbox" id="22" name="22" value="22" checked disabled></td>
+          {% else %}
+            <td><input type="checkbox" id="22" name="22" value="22" disabled></td>
+          {% endif %}
+          {% if schedule[1][2] == 1 %}
+            <td><input type="checkbox" id="23" name="23" value="23" checked disabled></td>
+          {% else %}
+            <td><input type="checkbox" id="23" name="23" value="23" disabled></td>
+          {% endif %}
+          {% if schedule[1][3] == 1 %}
+            <td><input type="checkbox" id="24" name="24" value="24" checked disabled></td>
+          {% else %}
+            <td><input type="checkbox" id="24" name="24" value="24" disabled></td>
+          {% endif %}
+          {% if schedule[1][4] == 1 %}
+            <td><input type="checkbox" id="25" name="25" value="25" checked disabled></td>
+          {% else %}
+            <td><input type="checkbox" id="25" name="25" value="25" disabled></td>
+          {% endif %}
+        </tr>
+      </tbody>
+      </table>
+  {% else %}
+    {% for list in definitivelist %}
+      {% if list[0] == 1 %}
+        <h4>Results for {{ list[3] }}</h4>
+        {% if list[1] == 0 %}
+        <div class="group-form">
+          <h6 class="down-margins">No players were found in this timeframe.</h6>
+        </div>
+        {% else %}
+           <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Username</th>
+                  <th scope="col">Email</th>
+                </tr>
+               </thead>
+               <tbody>
+                  {% for element in list[2] %}
+                    <tr>
+                      <td>{{ element[0] }}</td>
+                      <td>{{ element[1] }}</td>
+                    </tr>
+                  {% endfor %}
+               </tbody>
+           </table>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endblock %}
+
+

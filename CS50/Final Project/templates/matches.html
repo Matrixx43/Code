@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    My matches
+{% endblock %}
+
+{% block main %}
+    <div class="form-group">
+      <h1 class="down-margins">
+          My matches
+      </h1>
+    </div>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Match id</th>
+          <th scope="col">Winner</th>
+          <th scope="col">Points</th>
+          <th scope="col">Points</th>
+          <th scope="col">Loser</th>
+          <th scope="col">Date</th>
+        </tr>
+      </thead>
+      <tbody>
+          {% for i in range(a) %}
+            {% if table[i]["winner_id"] == user_id %}
+            <tr style="background-color: #99ff99;">
+              <td>{{ table[i]["match_id"] }}</td>
+              <td>{{ winners[i] }}</td>
+              <td>{{ table[i]["points_winner"] }}</td>
+              <td>{{ table[i]["points_loser"] }}</td>
+              <td>{{ losers[i] }}</td>
+              <td>{{ table[i]["date"] }}</td>
+            </tr>
+            {% else %}
+            <tr class="table-danger">
+              <td>{{ table[i]["match_id"] }}</td>
+              <td>{{ winners[i] }}</td>
+              <td>{{ table[i]["points_winner"] }}</td>
+              <td>{{ table[i]["points_loser"] }}</td>
+              <td>{{ losers[i] }}</td>
+              <td>{{ table[i]["date"] }}</td>
+            </tr>
+            {% endif %}
+          {% endfor %}
+      </tbody>
+    </table>
+{% endblock %}
+
+

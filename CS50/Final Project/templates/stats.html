@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    My stats
+{% endblock %}
+
+{% block head %}
+{% endblock %}
+
+{% block main %}
+<h6>The top 5 players you have played with are: </h6>
+<ul class="form-group centered">
+    {% for i in range(5) %}
+        {% if data[i] %}
+            <li><span style="font-weight: 500;">{{ data[i][1] }}</span> with {{ data[i][0] }} games played </li>
+        {% else %}
+            <li>Keep playing more games!</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+<h6>In total you have played {{ gamesplayed }} matches</h6>
+<ul class="form-group centered">
+    <li>You have <span style="color:green; font-weight: 500;">won</span> {{ victories }} games.</li>
+    <li>You have <span style="color:red; font-weight: 500;">lost</span> {{ losses }} games.</li>
+</ul>
+{% endblock %}
+

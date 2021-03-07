@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Remove a match
+{% endblock %}
+
+{% block main %}
+    <div class="form-group">
+      <h1 class="down-margins">
+          Remove match
+      </h1>
+    </div>
+    <div class="alert alert-danger" role="alert">
+      <h6>Warning:</h6>
+      <p>This action is irreversible</p>
+    </div>
+    <div class="form-group">
+        <h6>Insert the id of the match you wish to remove. You can see the id in <a href="/matches">My matches</a>.</h6>
+    </div>
+    <form action="/remove" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="match_id" placeholder="Match id" type="int" min="0">
+        </div>
+        <button class="btn btn-danger" type="submit">Remove</button>
+    </form>
+{% endblock %}

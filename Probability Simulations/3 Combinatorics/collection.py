@@ -4,7 +4,7 @@ n = 30 # Number of items to collect
 
 p = 0 # Proportion of cards achieved for some m
 m = int(2*n) # Number of trials
-result = 1 # Proportion of cards of the collection to have
+result = .5 # Proportion of cards of the collection to have
 while p < result:
     print(f"Repeating. p = {p}")
     repeat = []

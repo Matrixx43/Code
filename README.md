@@ -12,7 +12,7 @@ Includes:
 Programming languages used:
 - C
 - Python
-- SQLite
+- SQL
 - HTML
 - CSS
 - Javascript

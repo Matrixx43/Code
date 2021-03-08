@@ -8,4 +8,5 @@ Highlights:
 - [Final](https://www.youtube.com/watch?v=3pOB0Sdsuko): uses Python, HTML, CSS, Javascript and many SQL queries
 
 
+
 This refers to the 2020 version of the course with the Web Track.

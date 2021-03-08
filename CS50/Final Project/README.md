@@ -1,9 +1,12 @@
+Final Project [Video](https://www.youtube.com/watch?v=3pOB0Sdsuko)
+
+
 This project is a web-based app called Ping Pong Meet.
 
 
 Its aim is to help ping pong players find partners to play, keep track of their scores, and analyze their stats to improve.
 It provides an environment to promote ping pong within a larger community (like a college) by making it easy to meet other players.
-The reason for it is that there are usually few ping pong players, so it is important to keep them connected so they can play often.
+The reason for it is that there are usually few ping pong players, and it is important to keep them connected so they can play often.
 
 
 Ping Pong Meet uses Python, SQLite, HTML, CSS and JavaScript as its programming languages.

@@ -55,7 +55,7 @@ My schedule: Allows the user to choose from a table of checkboxes the timeframes
 Find: allows to search for another user with two options for searching (page modified with JavaScript upon choosing)
 - Find by username: displays (if found) the username and the email for contact.
 - Also displays stats with that particular user (matches played, won, lost) and his/her selected schedule.
-- Useful for keeping track of performance agains one particular user.
+- Useful for keeping track of performance against one particular user.
 
 - Find by schedule: allows to select up to the 10 timeframes (with table of checkboxes) to search for users available in those timeframes.
 - It will display a table for each timeframe selected, showing all available users in that timeframe with their email.

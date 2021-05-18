@@ -33,7 +33,7 @@ Main page: shows the following stats:
 
 Add match results: allows to add new match results, checking:
 - Logged in user was in the game
-- Result meets Ping Pong criteria (won by more than 2 points)
+- Result meets Ping Pong criteria (won by 2 points or more)
 - Winner score > Loser score
 - Assigns specific id to each match registered
 

@@ -2,6 +2,7 @@
 All the code I've written so far.
 
 Includes:
+- Cajamar Datathon 2022 code + [analytics solution](https://mruddym.wixsite.com/team-origin-data) with password: datathon22
 - My CS50 Final Project + [demonstration video](https://www.youtube.com/watch?v=3pOB0Sdsuko)
 - CS50 2020 [Problem Sets](https://cs50.harvard.edu/x/2020/) with Web Track
 - [Machine Learning](https://www.coursera.org/learn/machine-learning) Assignments

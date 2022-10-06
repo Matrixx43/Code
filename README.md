@@ -1,7 +1,7 @@
 # Code
 Most of the code I've written so far.
 
-#### Highlights:
+### Highlights:
 - Cajamar Datathon 2022 code + [Analytics Solution](https://mruddym.wixsite.com/team-origin-data) with password: datathon22
 - My [Presentation Video](https://vimeo.com/showcase/9366887/video/719785649) for Cajamar Datathon 2022
 - My CS50 Final Project + [demonstration video](https://www.youtube.com/watch?v=3pOB0Sdsuko)

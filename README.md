@@ -10,9 +10,9 @@ Includes:
 - Other coding exercises
 
 Programming languages used:
-- C
 - Python
 - SQL
+- C
 - HTML
 - CSS
 - Javascript
